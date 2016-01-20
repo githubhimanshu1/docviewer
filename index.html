@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="thirdparty/bootstrap-3.3.5-dist/css/bootstrap.css">
+<script type="text/javascript" src="thirdparty/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="thirdparty/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="thirdparty/angular.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="thirdparty/font-awesome-4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/baseStyle.css">
+<link rel="stylesheet" type="text/css" href="customstyle.css">
+<script type="text/javascript" src="js/callhandler.js"></script>
+</head>
+<body>
+
+	<div class="container" style="margin-top:20px">
+			
+
+			<!--ROW DEF STARTS HERE -->
+			<div class="row">
+				
+				<div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4" id="sidepanel">
+					<div class="well cards">
+							<div class="row">
+								<div class="col col-xs-6 col-md-6 col-lg-6">
+									<div class="well btn btn-success active iconcards" id="source" onclick="setUrl()" data-role="source">
+												<i class="fa fa-code" data-role="source"></i><br/>
+												<div style="font-size:17px" data-role="source">Source Code</div>
+
+										</div>
+
+								</div>
+
+								<div class="col col-xs-6 col-md-6 col-lg-6">
+									<div class="well btn btn-info active iconcards" onclick="setUrl()" data-role="settings">
+												<i class="fa fa-wrench" data-role="settings"></i>
+												<div style="font-size:17px" data-role="settings">Settings</div>
+
+										</div>
+
+								</div>
+
+
+							</div>
+
+								<div class="row">
+								<div class="col col-xs-6 col-md-6 col-lg-6">
+									<div class="well btn btn-primary active iconcards" onclick="setUrl()" data-role="Document">
+									<i class="fa fa-file-text"  data-role="Document"></i>
+										<div style="font-size:17px" data-role="Document">Document</div>
+
+										</div>
+
+								</div>
+
+								<div class="col col-xs-6 col-md-6 col-lg-6">
+									<div class="well btn btn-warning active iconcards" onclick="setUrl()" data-role="specs">
+												<i class="fa fa-pencil" data-role="specs"></i>
+												<div style="font-size:17px" data-role="specs">Design Specs</div>
+										</div>
+
+								</div>
+
+
+							</div>
+
+							<div class="row">
+									<div class="well sidecards">
+										<i class="fa fa-file-pdf-o"></i>
+										<h5>Recent Updates</h5>
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="well sidecards" >
+										<i class="fa fa-file-pdf-o"></i>
+										<h5>Export as PDF</h5>
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="well sidecards">
+										<i class="fa fa-bar-chart"></i>
+									<h5>Stats /Other Details</h5>
+									</div>
+							</div>
+
+
+
+
+
+
+					</div>
+				</div>
+
+				<div class="col col-xs-12 col-sm-8 col-md-8 col-lg-8">
+					<div class="well cards" id="content">
+						<div class="jumbotron btn-success active" id="docjumbo">
+							<h3><i class="fa fa-code" style="font-size:43px"></i><br/>
+							<span id="headingattr"> Source-Code ( ComponentName )</span></h3>
+						</div>
+						<div id="contentdoc">
+								
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+			<!--ROW DEF ENDS HERE -->
+
+
+
+
+	</div>
+
+
+
+
+	<!-- CONTAINER ENDS HERE -->
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<section class="grid_outer chapter">
+  <h1 class="chapter-title">Units and measurements
+          </h1>
+    <div class="chapter-content">
+        
+        <div class="chapter-intro">
+            <p>Some units have different meanings in different contexts. This chapter discusses the usage of device-independent pixels, scaleable pixels, as well as concepts like pixel density. </p>
+
+      
+      
+    </div>
+    
+        <nav class="chapter-toc">
+      <h1>Contents</h1>
+      <ul>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#units-measurements-pixel-density" data-qp-ui-data-id="qp:e">Pixel density
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#units-measurements-density-independent-pixels-dp-" data-qp-ui-data-id="qp:f">Density-independent pixels (dp)
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#units-measurements-scaleable-pixels-sp-" data-qp-ui-data-id="qp:g">Scaleable pixels (sp)
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#units-measurements-designing-layouts-for-dp" data-qp-ui-data-id="qp:h">Designing layouts for dp
+                </a></li>
+                <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#units-measurements-image-scaling" data-qp-ui-data-id="qp:i">Image scaling
+                </a></li>
+              </ul>
+    </nav>
+    
+    <div class="article-list">
+                        <div id="units-measurements-pixel-density" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }" data-qp-ui-data-id="qp:j">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }" data-qp-ui-data-id="qp:k">
+    Pixel density
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"></polygon>
+    </svg>
+  </h2>
+    <div class="article-content">
+    <div class="module-list">
+                  <div>
+              <section class="moduleB1">
+        <div class="module-body">
+      <p>The number of pixels that fit into an inch is referred to as “pixel density.” High-density screens have more pixels per inch than low-density ones. As a result, UI elements (such as a button) appear physically larger on low-density screens and smaller on high-density screens. </p>
+    </div>
+  </section>
+
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Screen resolution refers to the total number pixels in a display. </p><p><strong>screen density = screen width (or height) in pixels / screen width (or height) in </strong><strong>inches</strong></p><h4 class="related">
+Related
+</h4><div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/guide/practices/screens_support.html" title="Supporting Multiple Screens">
+      <img class="icon callout-icon" src="/design/spec/static/images/callout_android.svg" alt="">
+      <div class="info">
+        <div class="title">Supporting Multiple Screens</div>
+        <span class="subtitle">Optimize your design for different screen densities.</span>
+      </div>
+    </a>
+      </div><div class="modulettes">
+          <a class="modulette android" href="http://developer.android.com/guide/topics/resources/more-resources.html#Dimension" title="More Resource Types">
+      <img class="icon callout-icon" src="/design/spec/static/images/callout_android.svg" alt="">
+      <div class="info">
+        <div class="title">More Resource Types</div>
+        <span class="subtitle">Units of measure supported by Android.</span>
+      </div>
+    </a>
+      </div>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="//material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7N3BFUFpveGxFWVE/layout_units_density1.png">
+                    </div>
+                        <figcaption>
+          <p><br>High-density screen</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="//material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7MjdKekwta00yVFE/layout_units_density2.png">
+                    </div>
+                        <figcaption>
+          <p><br>Low-density screen</p>
+        </figcaption>
+              </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="units-measurements-density-independent-pixels-dp-" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }" data-qp-ui-data-id="qp:l">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }" data-qp-ui-data-id="qp:m">
+    Density-independent pixels (dp)
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"></polygon>
+    </svg>
+  </h2>
+    <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>"Density independence" refers to the uniform display of UI elements on screens with different densities. </p><p>Density-independent pixels (pronounced “dips”) are flexible units that scale to uniform dimensions on any screen. When developing an Android application, use dp to display elements uniformly on screens with different densities. </p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="media">
+                      <img src="//material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7SE4yRmp3SWsweE0/layout_units_dp.png">
+                    </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>A dp is equal to one physical pixel on a screen with a density of 160. To calculate dp:</p><p><strong>dp = (width in pixels * 160) / &nbsp;screen density</strong></p><p>When writing CSS, use px wherever dp or sp is stated. Dp only needs to be used in developing for Android.</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body data-table">
+            <div class="table-box">
+              <table cellpadding="0" cellspacing="0" class="c16"><tbody><tr class="c3"><td class="c18" colspan="1" rowspan="1"><p><span>Screen density</span></p></td><td class="c13" colspan="1" rowspan="1"><p><span>Screen width in pixels</span></p></td><td class="c8" colspan="1" rowspan="1"><p><span>Screen width in density-independent pixels</span></p></td></tr><tr class="c3"><td class="c10" colspan="1" rowspan="1"><p><span>120</span></p></td><td class="c11" colspan="1" rowspan="1"><p><span>180 px</span></p></td><td class="c21" colspan="1" rowspan="3"><p><span>240 dp</span></p></td></tr><tr class="c3"><td class="c10" colspan="1" rowspan="1"><p><span>160</span></p></td><td class="c11" colspan="1" rowspan="1"><p><span>240 px</span></p></td></tr><tr class="c3"><td class="c10" colspan="1" rowspan="1"><p><span>240</span></p></td><td class="c11" colspan="1" rowspan="1"><p><span>360 px</span></p></td></tr></tbody></table><p>If you have three screens, all 1.5 inches wide, with varying screen densities, the screen width will still be 240dp for all of them.</p>
+            </div>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  <div id="units-measurements-scaleable-pixels-sp-" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }" data-qp-ui-data-id="qp:n">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }" data-qp-ui-data-id="qp:o">
+    Scaleable pixels (sp)
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"></polygon>
+    </svg>
+  </h2>
+    <div class="article-content">
+    <div class="module-list">
+                  <div>
+              <section class="moduleB1">
+        <div class="module-body">
+      <p>When developing for Android, scaleable pixels (sp) serve the same function as dp, but for fonts. The default value of an sp is the same as the default value for dp. </p><p>The primary difference between an sp and a dp is that sp preserves a user's font settings. Users who have larger text settings for accessibility will see the font size matched to their text size preferences.</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="units-measurements-designing-layouts-for-dp" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }" data-qp-ui-data-id="qp:p">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }" data-qp-ui-data-id="qp:q">
+    Designing layouts for dp
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"></polygon>
+    </svg>
+  </h2>
+    <div class="article-content">
+    <div class="module-list">
+                  <div>
+              <section class="moduleB1">
+        <div class="module-body">
+      <p>When designing layouts for the screen, calculate an element’s measurements in dp: </p><p><strong>dp = (width in pixels * 160) / density</strong></p><p>For example, a 32 x 32 px icon with a screen density of 320 equals 16 x 16 dp.</p>
+    </div>
+  </section>
+
+        </div>
+              </div>
+  </div>
+</div>                  <div id="units-measurements-image-scaling" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }" data-qp-ui-data-id="qp:r">
+  <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }" data-qp-ui-data-id="qp:s">
+    Image scaling
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon icon-expand-collapse" role="img" viewBox="0 0 10 10" aria-labelledby="title desc">
+      <title id="title">Expand and collapse content</title>
+      <desc id="desc">An arrow that points down when collapsed and points up when expanded.</desc>
+      <polygon role="presentation" points="2.5,4.167 5,6.667 7.5,4.167 6.917,3.583 5,5.5 3.083,3.583"></polygon>
+    </svg>
+  </h2>
+    <div class="article-content">
+    <div class="module-list">
+                  <div>
+          <section class="moduleE1">
+    <div class="module-body">
+    <p>Images can be scaled to look the same across different screen resolutions by using these ratios:</p>
+  </div>
+  <div class="figure-group">
+    <div class="figure-row">
+            <figure class="">
+                          <div class="module-body data-table">
+            <div class="table-box">
+              <table cellpadding="0" cellspacing="0" class="c9"><tbody><tr class="c4"><td class="c0 c11" colspan="1" rowspan="1"><p><strong>Screen resolution</strong></p></td><td class="c0 c11" colspan="1" rowspan="1"><p><strong>dpi</strong></p></td><td class="c0 c11" colspan="1" rowspan="1"><p><strong>Pixel ratio</strong></p></td><td class="c0 c11" colspan="1" rowspan="1"><p><strong>Image size (pixels)</strong></p></td></tr><tr class="c4"><td class="c0" colspan="1" rowspan="1"><p><span>xxxhdpi</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>640</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>4.0</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>400 x 400</span></p></td></tr><tr class="c4"><td class="c0" colspan="1" rowspan="1"><p><span>xxhdpi</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>480</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>3.0</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>300 x 300</span></p></td></tr><tr class="c4"><td class="c0" colspan="1" rowspan="1"><p><span>xhdpi</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>320</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>2.0</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>200 x 200</span></p></td></tr><tr class="c4"><td class="c0" colspan="1" rowspan="1"><p><span>hdpi</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>240</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>1.5</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>150 x 150</span></p></td></tr><tr class="c4"><td class="c0" colspan="1" rowspan="1"><p><span>mdpi</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>160</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>1.0</span></p></td><td class="c0" colspan="1" rowspan="1"><p><span>100 x 100</span></p></td></tr></tbody></table>
+            </div>
+          </div>
+                      </figure>
+          </div>
+  </div>
+</section>
+        </div>
+              </div>
+  </div>
+</div>                  </div>
+
+  </div>
+
+</section>

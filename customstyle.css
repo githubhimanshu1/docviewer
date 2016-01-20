@@ -1,0 +1,54 @@
+body
+{
+	background-color:#f0f0f0;
+}
+.well
+{
+	
+	background-color:#f0f0f0;
+	border:0px solid #fff;
+}
+.iconcards
+{
+	width:100% !important;
+	height:100%;
+	font-size:35px;
+}
+#sidepanel
+{
+	
+}
+iframe
+{
+	width:100%;
+	height:600px;
+	border:0px solid #fff;
+}
+#content
+{
+	width:100%;
+	min-height:800px;
+	background-color:#fff;
+	padding:0px;
+	box-shadow: 2px 3px 4px #afafaf;
+}
+#docjumbo
+{
+	border-radius:0px;
+	text-align: center;
+}
+.sidecards
+{
+	background-color:#fff;text-align:center;
+	font-weight:bold;
+	cursor: hand !important;
+	coursor:pointer !important;
+}
+.sidecards>h5
+{
+	font-weight: bold;
+}
+#contentdoc
+{
+	padding:20px;
+}
