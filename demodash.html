@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title></title>
+		<meta name="description" content="">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+		
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+
+		<style type="text/css">
+		body
+		{
+			background-color:#f0f0f0;
+		}
+		.cards
+		{
+			height:200px !important;
+		}
+		.cards2
+		{
+			height:300px !important;
+		}
+		.cards3
+		{
+			height:75px !important;
+		}
+		.btn-footer
+		{
+			
+			height:50px;
+			border-radius:0px;
+		}
+		.footicon
+		{
+			font-size:25px;
+
+
+		}
+		.well
+		{
+			background-color:#fff;
+		}
+		.ribbon
+		{
+			box-shadow:1px 2px 3px #afafaf;
+		}
+		.ribbonicon
+		{
+			font-size:24px;
+			margin-left:25px;
+			margin-bottom:0px;
+		}
+		.lbl{
+			font-weight:bold;
+		}
+		.fieldcontainer
+		{
+			padding:5px;
+			border-right:1px dotted #afafaf;
+		}
+		</style>
+		
+	</head>
+	<body>
+
+		<!--modal definations -->
+		<div class="modal fade" id="mymodal">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header btn btn-block btn-default">
+												<button class="close" data-dismiss="modal" style="color:#fff">&times;</button>
+												Skills List</div>
+											<div class="modal-body">
+												<table class="table table-striped table-bordered">
+								<thead>
+									<th>Firstname</th>
+									<th>lastname</th>
+									<th>age</th>
+									<th>Organization</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Himanshu</td>
+										<td>Mishra</td>
+										<td>27</td>
+										<td>CSIL</td>
+
+									</tr>
+									<tr>
+										<td>Himanshu</td>
+										<td>Mishra</td>
+										<td>27</td>
+										<td>CSIL</td>
+
+									</tr>
+									<tr>
+										<td>Himanshu</td>
+										<td>Mishra</td>
+										<td>27</td>
+										<td>CSIL</td>
+
+									</tr>
+									<tr>
+										<td>Himanshu</td>
+										<td>Mishra</td>
+										<td>27</td>
+										<td>CSIL</td>
+
+									</tr>
+									<tr>
+										<td>Himanshu</td>
+										<td>Mishra</td>
+										<td>27</td>
+										<td>CSIL</td>
+
+									</tr>
+									<tr>
+										<td>Himanshu</td>
+										<td>Mishra</td>
+										<td>27</td>
+										<td>CSIL</td>
+
+									</tr>
+
+								</tbody>
+
+
+
+							</table>
+
+
+
+											</form>
+											</div>
+											<div class="modal-footer">
+												<button class="btn btn-default" data-dismiss="modal">Close</button>
+												<button class="btn btn-primary">Save Changes</button>
+
+											</div>
+
+										</div>
+									</div>
+								</div><!--mymodal ends-->
+
+
+
+								<div class="modal fade" id="settings">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header btn btn-block btn-default">
+												<button class="close" data-dismiss="modal" style="color:#fff">&times;</button>
+												Skills List</div>
+											<div class="modal-body">
+												<ul class="list-group">
+												  <li class="list-group-item">  <label><input type="checkbox"> </label>&nbsp Analyst View</li>
+												  <li class="list-group-item"><label><input type="checkbox"> </label>&nbsp RM View</li>
+												  <li class="list-group-item"><label><input type="checkbox"> </label>&nbsp Custom View</li>
+												</ul>
+
+
+											
+											</div>
+											<div class="modal-footer">
+												<button class="btn btn-default" data-dismiss="modal">Close</button>
+												<button class="btn btn-primary">Save Changes</button>
+
+											</div>
+
+										</div>
+									</div>
+								</div><!--mymodal ends-->
+
+								
+								
+							
+	
+
+
+		</div>
+
+	</div>
+
+
+	
+
+
+
+				<div class="col col-9" style="height:230px">
+						<div class="well cards2 ribbon" style="background-color:#fcfcfc">
+							<div id="chartContainer" style="height:230px;width: 100%;"></div>
+					
+
+
+						</div>
+				</div>
+				<div class="col col-3">
+						<div class="well cards2 ribbon ">
+							
+								<div class="col col-6 ">
+								
+							</div>
+							<div class="col col-6">
+								
+								</div>	
+						
+						</div>
+						
+				</div>
+					
+				<div class="col col-9" style="margin-top:-39px">
+					<div class="well ribbon" style="height:220px">
+						
+						<div class="col col-4" id="dchart1" style="border-right:1px dotted #ccc;height:200px !important;overflow:hidden"> </div>
+						
+					
+						<div class="col col-4" id="dchart2" style="border-right:1px dotted #ccc;height:200px !important;overflow:hidden"> </div> 
+					
+					<div>
+						<div class=" col col-4" id="dchart3" style="height:200px;overflow:hidden"  height=200></div> 
+					</div>
+				</div>
+
+				</div>
+					
+					<div class="col col-3" style="margin-top:-30px">
+					<div class="well ribbon" style="height:220px"></div>
+
+				</div>
+			
+				
+
+
+				</div>
+
+	
+
+		<div class="row">
+				<div class="col col-6 card2">
+					<div class="well ribbon">
+					<div id="stackedchart" style="height: 300px; width: 100%;"></div>
+				</div>
+			</div>
+
+				<div class="col col-6 card2">
+					<div class="well ribbon">
+					<div id="barchart" style="height: 300px; width: 100%;"></div>
+				</div>
+
+
+				</div>
+
+
+		</div>
+
+
+ 
+
+	</div>
+
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+	<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+
+
+
+	var doughchart = new CanvasJS.Chart("dchart1",
+	{
+		title:{
+			text: "Assets",
+			fontFamily: "Impact",
+			fontWeight: "normal"
+		},
+
+		legend:{
+			verticalAlign: "bottom",
+			horizontalAlign: "center"
+		},
+		data: [
+		{
+			//startAngle: 45,
+			indexLabelFontSize:1,
+			indexLabelFontFamily: "Garamond",
+			indexLabelFontColor: "darkgrey",
+			indexLabelLineColor: "darkgrey",
+			indexLabelPlacement: "outside",
+			type: "doughnut",
+			showInLegend: false,
+			dataPoints: [
+				{  y: 53.37, legendText:"Android 53%", indexLabel: "Android 53%" },
+				{  y: 35.0, legendText:"iOS 35%", indexLabel: "Apple iOS 35%" },
+				{  y: 7, legendText:"Blackberry 7%", indexLabel: "Blackberry 7%" },
+				{  y: 2, legendText:"Windows 2%", indexLabel: "Windows Phone 2%" },
+				{  y: 5, legendText:"Others 5%", indexLabel: "Others 5%" }
+			]
+		}
+		]
+	});
+
+	doughchart.render();
+
+
+
+	var dchart2 = new CanvasJS.Chart("dchart2",
+	{
+		title:{
+			text: "Liability",
+			fontFamily: "Impact",
+			fontWeight: "normal"
+		},
+
+		legend:{
+			verticalAlign: "bottom",
+			horizontalAlign: "center"
+		},
+		data: [
+		{
+			//startAngle: 45,
+			indexLabelFontSize:1,
+			indexLabelFontFamily: "Garamond",
+			indexLabelFontColor: "darkgrey",
+			indexLabelLineColor: "darkgrey",
+			indexLabelPlacement: "outside",
+			type: "doughnut",
+			showInLegend: false,
+			dataPoints: [
+				{  y: 53.37, legendText:"Android 53%", indexLabel: "Android 53%" },
+				{  y: 35.0, legendText:"iOS 35%", indexLabel: "Apple iOS 35%" },
+				{  y: 7, legendText:"Blackberry 7%", indexLabel: "Blackberry 7%" },
+				{  y: 2, legendText:"Windows 2%", indexLabel: "Windows Phone 2%" },
+				{  y: 5, legendText:"Others 5%", indexLabel: "Others 5%" }
+			]
+		}
+		]
+	});
+
+	dchart2.render();
+
+
+
+
+	var dchart3= new CanvasJS.Chart("dchart3",
+	{
+		title:{
+			text: "Trading Income",
+			fontFamily: "Impact",
+			fontWeight: "normal"
+		},
+
+		legend:{
+			verticalAlign: "bottom",
+			horizontalAlign: "center"
+		},
+		data: [
+		{
+			//startAngle: 45,
+			indexLabelFontSize:1,
+			indexLabelFontFamily: "Garamond",
+			indexLabelFontColor: "darkgrey",
+			indexLabelLineColor: "darkgrey",
+			indexLabelPlacement: "outside",
+			type: "doughnut",
+			showInLegend: false,
+			dataPoints: [
+				{  y: 53.37, legendText:"Android 53%", indexLabel: "Android 53%" },
+				{  y: 35.0, legendText:"iOS 35%", indexLabel: "Apple iOS 35%" },
+				{  y: 7, legendText:"Blackberry 7%", indexLabel: "Blackberry 7%" },
+				{  y: 2, legendText:"Windows 2%", indexLabel: "Windows Phone 2%" },
+				{  y: 5, legendText:"Others 5%", indexLabel: "Others 5%" }
+			]
+		}
+		]
+	});
+
+	dchart3.render();
+
+
+		
+		
+			
+
+
+
+			//bubble and point charts
+
+				var chart = new CanvasJS.Chart("chartContainer",
+		{
+			title:{
+				text: "Server Performance",
+				fontSize: 20
+			},
+                        animationEnabled: true,
+			axisX: {
+				title:"Server Load (TPS)",
+				titleFontSize: 18				
+				
+			},
+			axisY:{
+				title: "Response Time (sec)",
+				titleFontSize: 16				
+			},
+			legend: {
+				verticalAlign: 'bottom',
+				horizontalAlign: "center"
+			},
+
+			data: [
+			{        
+				type: "scatter",  
+				markerType: "square", 
+              toolTipContent: "<span style='\"'color: {color};'\"'><strong>{name}</strong></span><br/><strong> Load</strong> {x} <br/><strong> Response</strong></span> {y}sec",
+              
+				name: "Server Pluto",
+				showInLegend: true,  
+				dataPoints: [
+				
+				{ x: 23, y: 4 },
+				{ x: 28, y: 5 },
+				{ x: 39, y: 9 },
+				{ x: 34, y: 8 },
+				{ x: 24, y: 3 },
+				{ x: 29, y: 7 },
+				{ x: 29, y: 5 },
+				{ x: 23, y: 6 },
+				{ x: 27, y: 7 },
+				{ x: 34, y: 11 },
+				{ x: 36, y: 9 },
+				{ x: 33, y: 5 },
+				{ x: 32, y: 8 },
+				{ x: 21, y: 2 }
+				
+				]
+			}	,
+			{        
+				type: "scatter",     
+				name: "Server Mars",
+				markerType: "triangle",
+				showInLegend: true, 
+                toolTipContent: "<span style='\"'color: {color};'\"'><strong>{name}</strong></span><br/><strong> Load</strong> {x} <br/><strong> Response</strong></span> {y}sec",
+
+				dataPoints: [
+				
+				{ x: 24, y: 2 },
+				{ x: 27, y: 3 },
+				{ x: 35, y: 7 },
+				{ x: 32, y: 6 },
+				{ x: 29, y: 4 },
+				{ x: 23, y: 5 },
+				{ x: 24, y: 3 },
+				{ x: 26, y: 4 },
+				{ x: 24, y: 5 },
+				{ x: 33, y: 7 },
+				{ x: 34, y: 6 },
+				{ x: 30, y: 4 },
+				{ x: 37, y: 8 },
+				{ x: 24, y: 2 }
+				
+				]
+			}
+			],
+          legend:{
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;              
+              }
+              else {
+                e.dataSeries.visible = true;              
+              }
+              chart.render();
+            }
+          }
+		});
+
+chart.render();
+
+
+//stacked chart
+
+  var chart2 = new CanvasJS.Chart("stackedchart",
+    {
+      title:{
+      text: "Evening Sales in a Restaurant"
+      },
+      animationEnabled: true,
+      axisX: {
+        valueFormatString: "MMM",     
+        interval: 1,
+        intervalType: "month"
+      },
+
+
+      data: [
+      {        
+        type: "stackedBar",
+        legendText: "meals",
+        showInLegend: "true",
+        dataPoints: [
+        { x: new Date(2012, 01, 1), y: 71 },
+        { x: new Date(2012, 02, 1), y: 55},
+        { x: new Date(2012, 03, 1), y: 50 },
+        { x: new Date(2012, 04, 1), y: 65 },
+        { x: new Date(2012, 05, 1), y: 95 }
+        
+        ]
+      },
+        {        
+        type: "stackedBar",
+        name: "snacks",
+        showInLegend: "true",
+        dataPoints: [
+        { x: new Date(2012, 01, 1), y: 71 },
+        { x: new Date(2012, 02, 1), y: 55},
+        { x: new Date(2012, 03, 1), y: 50 },
+        { x: new Date(2012, 04, 1), y: 65 },
+        { x: new Date(2012, 05, 1), y: 95 }
+        
+        ]
+      },
+        {        
+        type: "stackedBar",
+        name: "drinks",
+        showInLegend: "true",
+        dataPoints: [
+        { x: new Date(2012, 01, 1), y: 71 },
+        { x: new Date(2012, 02, 1), y: 55},
+        { x: new Date(2012, 03, 1), y: 50 },
+        { x: new Date(2012, 04, 1), y: 65 },
+        { x: new Date(2012, 05, 1), y: 95 }
+        
+        ]
+      },
+        
+        {        
+        type: "stackedBar",
+        name: "dessert",
+        showInLegend: "true",
+        dataPoints: [
+        { x: new Date(2012, 01, 1), y: 61 },
+        { x: new Date(2012, 02, 1), y: 75},
+        { x: new Date(2012, 03, 1), y: 80 },
+        { x: new Date(2012, 04, 1), y: 85 },
+        { x: new Date(2012, 05, 1), y: 105 }
+        
+        ]
+      },
+        {        
+        type: "stackedBar",
+        name: "takeaway",
+        showInLegend: "true",
+        dataPoints: [
+        { x: new Date(2012, 01, 1), y: 20 },
+        { x: new Date(2012, 02, 1), y: 35},
+        { x: new Date(2012, 03, 1), y: 30 },
+        { x: new Date(2012, 04, 1), y: 45 },
+        { x: new Date(2012, 05, 1), y: 25 }
+        
+        ]
+      }
+        
+      ]
+      ,
+      legend:{
+        cursor:"pointer",
+        itemclick:function(e) {
+          if(typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible){
+            e.dataSeries.visible = false;
+          }
+          else {
+            e.dataSeries.visible = true;
+          }
+          
+          chart2.render();
+        }
+      }
+    });
+
+    chart2.render();
+
+
+
+	});
+
+	//barchart
+
+	var barchart = new CanvasJS.Chart("barchart",
+	{
+		animationEnabled: true,
+		title:{
+			text: "Chart with Labels on X Axis"
+		},
+		data: [
+		{
+			type: "column", //change type to bar, line, area, pie, etc
+			dataPoints: [
+				{ label: "banana", y: 18 },
+				{ label: "orange", y: 29 },
+				{ label: "apple",  y: 40 },                                    
+				{ label: "mango",  y: 34 },
+				{ label: "grape",  y: 24 }
+			]
+		}
+		]
+		});
+
+	barchart.render();
+
+
+
+
+
+
+	</script>
+	
+	</body>
+</html>
+
