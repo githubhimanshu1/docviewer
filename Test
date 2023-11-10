@@ -1,0 +1,41 @@
+import streamlit as st
+from st_aggrid import AgGrid, GridOptionsBuilder
+
+# Sample data
+data = [
+    {"Name": "John", "Age": 28, "Country": "USA"},
+    {"Name": "Alice", "Age": 35, "Country": "Canada"},
+    {"Name": "Bob", "Age": 42, "Country": "UK"},
+]
+
+# JavaScript code to set component value
+js_code = """
+function onCellClicked(params) {
+    var selectedData = params.data;
+    var jsonString = JSON.stringify(selectedData);
+    Streamlit.setComponentValue(jsonString);
+}
+"""
+
+# Display Ag-Grid with custom JavaScript
+grid_options = GridOptionsBuilder.from_dict({"onCellClicked": "onCellClicked"}).build()
+grid_result = AgGrid(data, gridOptions=grid_options, height=200, width="100%")
+
+# Execute custom JavaScript code
+st.markdown(
+    f"""
+    <script>
+        {js_code}
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Streamlit callback to handle the selected data
+selected_data_json = st.empty()
+
+# Use selected data in Streamlit
+if selected_data_json:
+    selected_data = selected_data_json.json
+    st.write("Selected Data:", selected_data)
+    # You can now use the selected_data in your Streamlit app
