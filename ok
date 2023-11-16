@@ -1,86 +1,13 @@
-Test-Driven Development (TDD) is a software development approach where you write tests before you write the actual code (functionality) to ensure that the code functions as expected. It follows a cycle known as the "Red-Green-Refactor" cycle:
-
-Red: Write a failing test for the feature or behavior you want to implement. This test should not pass initially because the feature is not implemented yet.
-
-Green: Write the minimum code required to make the failing test pass. This code might not be perfect, but it should make the test pass.
-
-Refactor: After the test passes, refactor your code to make it more efficient, readable, and maintainable.
-
-Here's how to implement Test-Driven Development in a Python project and generate a test report using the unittest framework and the unittest-xml-reporting package as an example:
-
-Set up Your Python Project:
-
-Create a new directory for your project and set up your Python environment. You can use virtual environments to manage dependencies.
-
-bash
-Copy code
-mkdir my_project
-cd my_project
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-Install Required Packages:
-
-You need unittest-xml-reporting to generate XML test reports. Install it using pip.
-
-bash
-Copy code
-pip install unittest-xml-reporting
-Write a Test:
-
-Create a test file (e.g., test_my_feature.py) for your feature, and write a failing test using the unittest framework. Here's a simple example:
-
-python
-Copy code
-import unittest
-
-def my_function(x):
-    return x * 2
-
-class TestMyFunction(unittest.TestCase):
-    def test_double(self):
-        self.assertEqual(my_function(2), 4)
-
-if __name__ == '__main__':
-    unittest.main()
-Run the Test:
-
-Run the test using the following command:
-
-bash
-Copy code
-python -m unittest -v test_my_feature.py
-The test should fail initially because the feature is not implemented yet.
-
-Implement the Feature:
-
-Implement the feature in your code to make the test pass. In this case, you would define the my_function to double the input.
-
-python
-Copy code
-def my_function(x):
-    return x * 2
-Refactor (Optional):
-
-After the test passes, you can refactor your code to make it better.
-
-Generate a Test Report:
-
-To generate a test report in XML format using unittest-xml-reporting, run the following command:
-
-bash
-Copy code
-python -m xmlrunner discover -o test-reports
-This will generate an XML test report in the test-reports directory.
-
-View the Test Report:
-
-You can view the test report using any tool that supports JUnit-style XML reports or convert it to HTML for better readability.
-
-To convert the XML report to HTML, you can use the xml2html tool from the unittest-xml-reporting package:
-
-bash
-Copy code
-xml2html -o test-reports test-reports/TESTS-*.xml
-You can then open the HTML report in a web browser to see the test results.
-
-That's how you implement Test-Driven Development in a Python project and generate a test report. This process helps you ensure that your code is working correctly and is maintainable as you develop new features.
+  /* Modify this part according to your needs */
+        .stTabs > .tablist {
+            background-color: #0E1117;  /* Tab bar background */
+            border: none;
+        }
+        .stTabs > .tablist > .tab {
+            color: #ffffff;  /* Tab text color */
+            margin-left: 10px;
+        }
+        .stTabs > .tablist > .tab--selected {
+            background-color: #262730;  /* Active tab background */
+            border-bottom: 2px solid #4CAF50; /* Active tab bottom border */
+        }
