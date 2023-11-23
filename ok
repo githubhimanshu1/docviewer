@@ -1,13 +1,23 @@
-  /* Modify this part according to your needs */
-        .stTabs > .tablist {
-            background-color: #0E1117;  /* Tab bar background */
-            border: none;
-        }
-        .stTabs > .tablist > .tab {
-            color: #ffffff;  /* Tab text color */
-            margin-left: 10px;
-        }
-        .stTabs > .tablist > .tab--selected {
-            background-color: #262730;  /* Active tab background */
-            border-bottom: 2px solid #4CAF50; /* Active tab bottom border */
-        }
+import csv
+
+def mask_field(field):
+    # Return the field as-is if it's too short to mask
+    if len(field) <= 2:
+        return field
+    # Mask all characters except the first and last
+    return field[0] + '*' * (len(field) - 2) + field[-1]
+
+# Replace 'input.csv' and 'output.csv' with your file paths
+input_file_path = 'input.csv'
+output_file_path = 'output.csv'
+
+with open(input_file_path, mode='r', newline='', encoding='utf-8') as infile, \
+     open(output_file_path, mode='w', newline='', encoding='utf-8') as outfile:
+
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile)
+
+    for row in reader:
+        # Assuming you want to mask the second field in each row
+        row[1] = mask_field(row[1])
+        writer.writerow(row)
