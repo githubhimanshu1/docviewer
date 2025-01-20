@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out',
+          },
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gray-50">
+  <div class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="bg-gray-50 shadow-md p-4 flex items-center justify-between animate-fadeIn border-b border-gray-200">
+      <div class="flex items-center space-x-4">
+        <img src="https://img1.pnghut.com/2/2/11/82b4sBJP0x/text-solution-snowflake-computing-blue-brand.jpg" alt="App Icon" class="w-8 h-8">
+        <h1 class="text-xl font-semibold">Script</h1>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="p-2 rounded-full hover:bg-gray-200">
+          <img src="https://img.icons8.com/ios-glyphs/24/000000/search.png" alt="Search Icon">
+        </button>
+        <button class="p-2 rounded-full hover:bg-gray-200">
+          <img src="https://img.icons8.com/ios-glyphs/24/000000/settings.png" alt="Settings Icon">
+        </button>
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow">Upgrade</button>
+      </div>
+    </header>
+
+    <div class="flex flex-1">
+      <!-- Left Panel -->
+      <div class="w-1/5 bg-gray-100 border-r border-gray-200 p-4 flex flex-col">
+        <nav class="flex-1">
+          <ul class="space-y-4">
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500"><img src="https://img.icons8.com/ios/24/000000/chat--v1.png" class="w-6 h-6 mr-2">AI Chat</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500"><img src="https://img.icons8.com/ios/24/000000/project.png" class="w-6 h-6 mr-2">Projects</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500"><img src="https://img.icons8.com/ios/24/000000/template.png" class="w-6 h-6 mr-2">Templates</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500"><img src="https://img.icons8.com/ios/24/000000/documents.png" class="w-6 h-6 mr-2">Documents</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500"><img src="https://img.icons8.com/ios/24/000000/community-grants.png" class="w-6 h-6 mr-2">Community</a></li>
+          </ul>
+        </nav>
+
+        <!-- Pinned Panel -->
+        <div class="mt-6">
+          <h3 class="text-sm font-semibold text-gray-600 mb-2">Pinned</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between p-3 bg-white rounded-lg shadow hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Pinned Chat 1</span>
+            </li>
+            <li class="flex items-center justify-between p-3 bg-white rounded-lg shadow hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Pinned Chat 2</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Center Panel -->
+      <div class="flex-1 bg-white flex flex-col p-6 relative">
+        <div class="space-y-6">
+          <!-- User Settings Section -->
+          <div class="border border-gray-200 rounded-lg shadow p-4">
+            <div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('user-settings').classList.toggle('hidden')">
+              <h3 class="text-lg font-semibold">User Settings</h3>
+              <span class="text-gray-500">▼</span>
+            </div>
+            <div id="user-settings" class="mt-4 hidden">
+              <ul class="space-y-4">
+                <li class="flex items-center justify-between">
+                  <label for="theme-preference" class="w-1/2">Theme Preference</label>
+                  <select id="theme-preference" class="border border-gray-300 rounded-lg p-2 w-1/2">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </li>
+                <li class="flex items-center justify-between">
+                  <label for="message-display" class="w-1/2">Message Display Settings</label>
+                  <select id="message-display" class="border border-gray-300 rounded-lg p-2 w-1/2">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                  </select>
+                </li>
+                <li>
+                  <div>
+                    <span>Keyboard Shortcuts</span>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                      <li>Ctrl + Enter: Send Message</li>
+                      <li>Ctrl + K: Open Command Palette</li>
+                      <li>Ctrl + /: Toggle Sidebar</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="flex items-center justify-between">
+                  <label for="language" class="w-1/2">Language Preferences</label>
+                  <select id="language" class="border border-gray-300 rounded-lg p-2 w-1/2">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- AI Configuration Section -->
+          <div class="border border-gray-200 rounded-lg shadow p-4">
+            <div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('ai-config').classList.toggle('hidden')">
+              <h3 class="text-lg font-semibold">AI Configuration</h3>
+              <span class="text-gray-500">▼</span>
+            </div>
+            <div id="ai-config" class="mt-4 hidden">
+              <ul class="space-y-4">
+                <li class="flex items-center justify-between">
+                  <label for="ai-model" class="w-1/2">AI Model Name</label>
+                  <select id="ai-model" class="border border-gray-300 rounded-lg p-2 w-1/2">
+                    <option value="llama">Llama</option>
+                    <option value="claude">Claude</option>
+                    <option value="arctic">Arctic</option>
+                    <option value="gpt">GPT</option>
+                  </select>
+                </li>
+                <li>Response Preferences</li>
+                <li>Length Customization</li>
+                <li>Instruction Management</li>
+                <li>API Key</li>
+                <li>Usage Limits and Alerts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="w-1/4 bg-gray-100 border-l border-gray-200 p-4">
+        <h3 class="text-lg font-medium mb-4">Projects</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Generate 5 attention-grabbing headlines</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Learning From 100 Years...</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Research Efficiencies</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Write a Sweet Note...</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.cursor-pointer').forEach(section => {
+      section.addEventListener('click', () => {
+        const arrow = section.querySelector('span');
+        arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,130 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="thirdparty/bootstrap-3.3.5-dist/css/bootstrap.css">
-<script type="text/javascript" src="thirdparty/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="thirdparty/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="thirdparty/angular.min.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="thirdparty/font-awesome-4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/baseStyle.css">
-<link rel="stylesheet" type="text/css" href="customstyle.css">
-<script type="text/javascript" src="js/callhandler.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out',
+          },
+        }
+      }
+    };
+  </script>
 </head>
-<body>
+<body class="bg-gray-50">
+  <div class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="bg-gray-50 shadow-md p-4 flex items-center justify-between animate-fadeIn border-b border-gray-200">
+      <div class="flex items-center space-x-4">
+        <img src="https://cdn.quantiphi.com/2021/07/a755db66-5fa0775c8dc32dc5cce9150b_snowflake-icon.png" alt="App Icon" class="w-8 h-8">
+        <h1 class="text-xl font-semibold">Employee Assistant AI</h1>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="p-2 rounded-full hover:bg-gray-200">
+          <img src="https://img.icons8.com/ios-glyphs/24/000000/search.png" alt="Search Icon">
+        </button>
+        <button class="p-2 rounded-full hover:bg-gray-200">
+          <img src="https://img.icons8.com/ios-glyphs/24/000000/settings.png" alt="Settings Icon">
+        </button>
+        <button class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-blue-700 shadow">Profile</button>
+      </div>
+    </header>
 
-	<div class="container" style="margin-top:20px">
-			
+    <div class="flex flex-1">
+      <!-- Left Panel -->
+      <div class="w-1/6 bg-gray-100 border-r border-gray-200 p-4 flex flex-col">
+        <nav class="flex-1">
+          <ul class="space-y-4">
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/chat--v1.png" class="w-6 h-6 mr-2">AI Chat</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/project.png" class="w-6 h-6 mr-2">Projects</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/template.png" class="w-6 h-6 mr-2">Templates</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/documents.png" class="w-6 h-6 mr-2">Documents</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/community-grants.png" class="w-6 h-6 mr-2">Community</a></li>
+          </ul>
+        </nav>
+        <div class="mt-4 inline-flex px-4 py-2 bg-gray-200">
+            <button class="px-4 py-2 bg-white text-black rounded-lg hover:bg-white-700 shadow flex flex-1 rounded-l-lg shadow-lg justify-center font-semibold w-24">Light</button>
+            <button class="px-4 py-2 bg-gray-800 text-black  hover:bg-white-700 shadow flex flex-1 rounded-r-lg shadow-lg justify-center font-semibold w-24 text-white">Dark</button>
+        </div>
+        <div class="mt-4">
+          <div class="flex items-center space-x-2">
+            <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="text-sm font-medium">Himanshu Mishra</p>
+              <p class="text-xs text-gray-500">hey@unspace.agency</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<!--ROW DEF STARTS HERE -->
-			<div class="row">
-				
-				<div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4" id="sidepanel">
-					<div class="well cards">
-							<div class="row">
-								<div class="col col-xs-6 col-md-6 col-lg-6">
-									<div class="well btn btn-success active iconcards" id="source" onclick="setUrl()" data-role="source">
-												<i class="fa fa-code" data-role="source"></i><br/>
-												<div style="font-size:17px" data-role="source">Source Code</div>
+      <!-- Center Panel -->
+      <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 animate-fadeIn text-gray-800">Welcome to Employee Assistant</h2>
+          <p class="text-lg text-gray-600 animate-fadeIn mb-8">Get started by Employee Assistant a task and Chat can do the rest. Not sure where to start?</p>
+          <!-- Four Color Buttons -->
+          <div class="grid grid-cols-2 gap-4 w-full max-w-md justify-center m-auto">
+            <button class="flex items-center justify-between p-4 bg-yellow-50 border border-yellow-300 rounded-lg hover:bg-yellow-100 shadow">
+              <span class="text-lg font-medium">Write Copy</span>
+              <img src="https://img.icons8.com/ios-filled/24/000000/edit--v1.png" alt="Icon">
+            </button>
+            <button class="flex items-center justify-between p-4 bg-blue-50 border border-blue-300 rounded-lg hover:bg-blue-100 shadow">
+              <span class="text-lg font-medium">Image Generation</span>
+              <img src="https://img.icons8.com/ios-filled/24/000000/image.png" alt="Icon">
+            </button>
+            <button class="flex items-center justify-between p-4 bg-green-50 border border-green-300 rounded-lg hover:bg-green-100 shadow">
+              <span class="text-lg font-medium">Create Avatar</span>
+              <img src="https://img.icons8.com/ios-filled/24/000000/avatar.png" alt="Icon">
+            </button>
+            <button class="flex items-center justify-between p-4 bg-pink-50 border border-pink-300 rounded-lg hover:bg-pink-100 shadow">
+              <span class="text-lg font-medium">Write Code</span>
+              <img src="https://img.icons8.com/ios-filled/24/000000/code.png" alt="Icon">
+            </button>
+          </div>
+        </div>
+        <!-- Floating Input Panel -->
+        <div class="fixed bottom-16 left-1/2 transform -translate-x-1/2 w-[90%] max-w-4xl  rounded-lg shadow-lg border bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg">
+          <div class="flex items-center space-x-0.1 border-b ">
+            <input type="text" placeholder="Summarize the latest..." class="flex-1 p-3 border border-gray-300 rounded-xs focus:outline-none focus:ring focus:ring-blue-200 border-none">
+            <button class="flex items-center px-4 py-4 bg-white text-white rounded-xs -left-0.8 white relative hover:bg-blue-600 text-black">
+              <img src="https://img.icons8.com/ios-filled/16/000/paper-plane.png" class="mr-2 rotate-45 rounded-xs" alt="Send Icon">
+              
+            </button>
+          </div>
+          <div class="flex  mt-0 py-2 pb-3 bg-gray-100">
+            <button class="flex items-left space-x-2 px-4  hover:bg-gray-200">
+              <img src="https://img.icons8.com/ios/16/000000/attach.png" alt="Attach Icon">
+              <span class="text-sm text-gray-700 font-bold">Attach</span>
+            </button>
+            <button class="flex items-center space-x-2 px-4 font-bold">
+              <img src="https://img.icons8.com/ios/16/000000/microphone.png" alt="Voice Icon">
+              <span class="text-sm text-gray-700">Voice Message</span>
+            </button>
+            <button class="flex items-center space-x-2 px-4 font-bold">
+              <img src="https://img.icons8.com/ios/16/000000/search.png" alt="Browse Icon">
+              <span class="text-sm text-gray-700">Browse Prompts</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-										</div>
-
-								</div>
-
-								<div class="col col-xs-6 col-md-6 col-lg-6">
-									<div class="well btn btn-info active iconcards" onclick="setUrl()" data-role="settings">
-												<i class="fa fa-wrench" data-role="settings"></i>
-												<div style="font-size:17px" data-role="settings">Settings</div>
-
-										</div>
-
-								</div>
-
-
-							</div>
-
-								<div class="row">
-								<div class="col col-xs-6 col-md-6 col-lg-6">
-									<div class="well btn btn-primary active iconcards" onclick="setUrl()" data-role="Document">
-									<i class="fa fa-file-text"  data-role="Document"></i>
-										<div style="font-size:17px" data-role="Document">Document</div>
-
-										</div>
-
-								</div>
-
-								<div class="col col-xs-6 col-md-6 col-lg-6">
-									<div class="well btn btn-warning active iconcards" onclick="setUrl()" data-role="specs">
-												<i class="fa fa-pencil" data-role="specs"></i>
-												<div style="font-size:17px" data-role="specs">Design Specs</div>
-										</div>
-
-								</div>
-
-
-							</div>
-
-							<div class="row">
-									<div class="well sidecards">
-										<i class="fa fa-file-pdf-o"></i>
-										<h5>Recent Updates</h5>
-									</div>
-							</div>
-
-							<div class="row">
-									<div class="well sidecards" >
-										<i class="fa fa-file-pdf-o"></i>
-										<h5>Export as PDF</h5>
-									</div>
-							</div>
-
-							<div class="row">
-									<div class="well sidecards">
-										<i class="fa fa-bar-chart"></i>
-									<h5>Stats /Other Details</h5>
-									</div>
-							</div>
-
-
-
-
-
-
-					</div>
-				</div>
-
-				<div class="col col-xs-12 col-sm-8 col-md-8 col-lg-8">
-					<div class="well cards" id="content">
-						<div class="jumbotron btn-success active" id="docjumbo">
-							<h3><i class="fa fa-code" style="font-size:43px"></i><br/>
-							<span id="headingattr"> Source-Code ( ComponentName )</span></h3>
-						</div>
-						<div id="contentdoc">
-								
-						</div>
-
-					</div>
-				</div>
-
-
-			</div>
-			<!--ROW DEF ENDS HERE -->
-
-
-
-
-	</div>
-
-
-
-
-	<!-- CONTAINER ENDS HERE -->
-
-
-
-
-
-
-
+      <!-- <div class="relative mx-auto max-w-md rounded-lg bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg">l -->
+      <div class="w-1/6 bg-gray-100 border-l border-gray-200 p-4 ">
+        <h3 class="text-lg font-medium mb-4">Projects</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">New Project</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Learning From 100 Years...</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Research Efficiencies</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Write a Sweet Note...</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

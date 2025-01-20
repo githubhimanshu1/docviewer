@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out',
+          },
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gray-50">
+  <div class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="bg-gray-50 shadow-md p-4 flex items-center justify-between animate-fadeIn border-b border-gray-200">
+      <div class="flex items-center space-x-4">
+        <img src="https://cdn.quantiphi.com/2021/07/a755db66-5fa0775c8dc32dc5cce9150b_snowflake-icon.png" alt="App Icon" class="w-8 h-8">
+        <h1 class="text-xl font-semibold">Employee Assistant AI</h1>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="p-2 rounded-full hover:bg-gray-200">
+          <img src="https://img.icons8.com/ios-glyphs/24/000000/search.png" alt="Search Icon">
+        </button>
+        <button class="p-2 rounded-full hover:bg-gray-200">
+          <img src="https://img.icons8.com/ios-glyphs/24/000000/settings.png" alt="Settings Icon">
+        </button>
+        <button class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-blue-700 shadow">Profile</button>
+      </div>
+    </header>
+
+    <div class="flex h-screen">
+      <!-- Left Panel -->
+      <div class="w-1/6 bg-gray-100 border-r border-gray-200 p-4 flex-1/2 flex-col">
+        <nav class="flex-1">
+          <ul class="space-y-4 h-[220px] border-b-2">
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/chat--v1.png" class="w-6 h-6 mr-2">AI Chat</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/project.png" class="w-6 h-6 mr-2">Projects</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/template.png" class="w-6 h-6 mr-2">Templates</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/documents.png" class="w-6 h-6 mr-2">Documents</a></li>
+            <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500 font-semibold"><img src="https://img.icons8.com/ios/24/000000/community-grants.png" class="w-6 h-6 mr-2">Community</a></li>
+          </ul>
+        </nav>
+
+        <!-- Pinned Panel -->
+        <div class="mt-12">
+          <h3 class="text-sm font-semibold text-gray-600 mb-2">Pinned</h3>
+          <ul class="space-y-0">
+            <li class="flex items-center justify-between p-3  rounded-lg  hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Pinned Chat 1</span>
+            </li>
+            <li class="flex items-center justify-between p-3  rounded-lg  hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Pinned Chat 2</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Archived Panel -->
+        <div class="mt-6">
+          <h3 class="text-sm font-semibold text-gray-600 mb-2">Archived</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between p-3 bg-white rounded-lg shadow hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Archived Chat 1</span>
+            </li>
+            <li class="flex items-center justify-between p-3 bg-white rounded-lg shadow hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Archived Chat 2</span>
+            </li>
+          </ul>
+        </div>
+
+        
+
+        <!-- Saved Panel -->
+        <div class="mt-6">
+          <h3 class="text-sm font-semibold text-gray-600 mb-2">Saved</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between p-3 bg-white rounded-lg shadow hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Saved Chat 1</span>
+            </li>
+            <li class="flex items-center justify-between p-3 bg-white rounded-lg shadow hover:bg-gray-100">
+              <span class="text-sm text-gray-800">Saved Chat 2</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-4 inline-flex px-2 py-2 bg-gray-200 justify-center">
+          <button class="px-4 py-2 bg-white text-black rounded-lg hover:bg-white-700 shadow flex flex-1 rounded-l-lg shadow-lg justify-center font-semibold w-24">Light</button>
+          <button class="px-4 py-2 bg-gray-800 text-black  hover:bg-white-700 shadow flex flex-1 rounded-r-lg shadow-lg justify-center font-semibold w-24 text-white">Dark</button>
+      </div>
+     
+      </div>
+
+
+
+      <!-- Center Panel -->
+      <div class="flex-1 bg-white flex flex-col p-12 relative">
+        <div class="flex justify-center mb-6">
+          <div class="flex items-center space-x-4">
+            <img src="https://via.placeholder.com/40" alt="User Profile" class="w-10 h-10 rounded-full border border-gray-300">
+            <img src="https://img.icons8.com/ios-filled/50/000000/robot-2.png" alt="Robot Icon" class="w-10 h-10">
+          </div>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-lg font-medium mb-2">Generate 5 attention-grabbing headlines</h3>
+          <div class="flex flex-col space-y-4">
+            <div class="flex items-start space-x-4">
+              <img src="https://via.placeholder.com/40" alt="User Profile" class="w-10 h-10 rounded-full">
+              <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 flex-1">
+                <p class="text-sm text-gray-700">Here are the results of <strong>5 attention-grabbing headlines</strong>:</p>
+                <ol class="list-decimal pl-5 mt-3 space-y-2 text-sm text-gray-800">
+                  <li>Revolutionize Customer Engagement with AI Chat Copywriter</li>
+                  <li>Unleash the Power of AI Chat Copywriters for Transformative Customer Experiences</li>
+                  <li>Chatbots on Steroids: Meet the AI Copywriter Transforming Conversations</li>
+                  <li>From Bland to Brilliant: AI Chat Copywriters Make Brands Conversational Rockstars</li>
+                  <li>Say Goodbye to Boring Chats: AI Copywriters Elevate Conversational Marketing</li>
+                </ol>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <img src="https://img.icons8.com/ios-filled/50/000000/robot-2.png" alt="Robot Icon" class="w-10 h-10">
+              <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 flex-1">
+                <p class="text-sm text-gray-700">Here’s another set of headlines generated:</p>
+                <ul class="list-disc pl-5 mt-3 space-y-2 text-sm text-gray-800">
+                  <li>Maximize Your Impact with AI Copywriting</li>
+                  <li>The Future of Marketing: AI at Its Best</li>
+                  <li>Unleashing Creativity with AI Tools</li>
+                  <li>Transform Conversations with AI Innovation</li>
+                  <li>Achieve New Heights in Branding with AI</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regenerate Button -->
+        <div class="fixed bottom-16 left-1/2 transform -translate-x-1/2 w-[90%] max-w-4xl">
+          <button class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow">Regenerate</button>
+        </div>
+            <!-- Floating Input Panel -->
+         <!-- Floating Input Panel -->
+         <div class="fixed bottom-16 left-1/2 transform -translate-x-1/2 w-[90%] max-w-4xl  rounded-lg shadow-lg border bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg">
+            <div class="flex items-center space-x-0.1 border-b ">
+              <input type="text" placeholder="Summarize the latest..." class="flex-1 p-3 border border-gray-300 rounded-xs focus:outline-none focus:ring focus:ring-blue-200 border-none">
+              <button class="flex items-center px-4 py-4 bg-white text-white rounded-xs -left-0.8 white relative hover:bg-blue-600 text-black">
+                <img src="https://img.icons8.com/ios-filled/16/000/paper-plane.png" class="mr-2 rotate-45 rounded-xs" alt="Send Icon">
+                
+              </button>
+            </div>
+            <div class="flex  mt-0 py-2 pb-3 bg-gray-100">
+              <button class="flex items-left space-x-2 px-4  hover:bg-gray-200">
+                <img src="https://img.icons8.com/ios/16/000000/attach.png" alt="Attach Icon">
+                <span class="text-sm text-gray-700 font-bold">Attach</span>
+              </button>
+              <button class="flex items-center space-x-2 px-4 font-bold">
+                <img src="https://img.icons8.com/ios/16/000000/microphone.png" alt="Voice Icon">
+                <span class="text-sm text-gray-700">Voice Message</span>
+              </button>
+              <button class="flex items-center space-x-2 px-4 font-bold">
+                <img src="https://img.icons8.com/ios/16/000000/search.png" alt="Browse Icon">
+                <span class="text-sm text-gray-700">Browse Prompts</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      <!-- Right Panel -->
+      <div class="w-1/6 bg-gray-100 border-l border-gray-200 p-4">
+        <h3 class="text-lg font-medium mb-4">Projects</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Generate 5 attention-grabbing headlines</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Learning From 100 Years...</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Research Efficiencies</a></li>
+          <li><a href="#" class="block p-3 bg-white rounded-lg hover:bg-gray-100 shadow">Write a Sweet Note...</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
